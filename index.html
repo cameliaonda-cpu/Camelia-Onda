@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#e8c4ca">
+<meta name="description" content="Camelia — Ropa, complementos y moda curvy en Onda, Castellón.">
+<title>Camelia | Ropa, complementos y moda curvy</title>
+<style>
+:root{--bg:#fffdfa;--paper:#fff;--pink:#e7c0c7;--pink2:#f7e8ea;--rose:#b87380;--ink:#403630;--muted:#806f67;--line:#eadeda;--shadow:0 14px 40px rgba(70,48,42,.08)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Arial,sans-serif}a{text-decoration:none;color:inherit}button,input,select{font:inherit}
+.top{background:var(--pink2);font-size:12px;padding:8px 5%;display:flex;justify-content:center;gap:40px}.top b{font-weight:600}
+.header{position:sticky;top:0;z-index:20;background:rgba(255,253,250,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{max-width:1200px;margin:auto;min-height:82px;padding:10px 5%;display:flex;align-items:center;gap:25px}.brand{font:42px Georgia,serif;letter-spacing:-2px}.brand em{font-style:normal;color:var(--rose)}
+.menu{display:flex;gap:23px;margin-left:auto;font-size:12px;text-transform:uppercase;letter-spacing:.8px}.menu a:hover{color:var(--rose)}
+.actions{display:flex;gap:9px}.iconbtn{border:0;background:transparent;cursor:pointer;font-size:19px}.hamb{display:none}
+.hero{max-width:1400px;margin:auto;display:grid;grid-template-columns:1fr 1fr;min-height:600px;background:#f3e2de}.hero-copy{padding:80px 10%;display:flex;flex-direction:column;justify-content:center}.eyebrow{text-transform:uppercase;letter-spacing:3px;font-size:11px;color:var(--rose);font-weight:bold}.hero h1{font:clamp(55px,7vw,92px)/.88 Georgia,serif;margin:17px 0}.hero p{font:24px/1.45 Georgia,serif;max-width:540px;color:#5d4d46}.btn{display:inline-flex;justify-content:center;align-items:center;background:var(--pink);border:0;border-radius:30px;padding:13px 23px;color:var(--ink);cursor:pointer;font-size:12px;letter-spacing:.5px;width:max-content}.btn:hover{filter:brightness(.97)}.hero-art{min-height:600px;background:linear-gradient(135deg,#e2c9b9,#f8e9e5 48%,#d3b59f);position:relative;overflow:hidden}.hero-art:before{content:"";position:absolute;width:45%;height:75%;right:11%;bottom:-10%;background:rgba(255,255,255,.5);border-radius:50% 50% 8px 8px}.hero-art:after{content:"Camelia";position:absolute;left:10%;top:36%;font:78px Georgia,serif;color:rgba(255,255,255,.9)}
+.section{max-width:1200px;margin:auto;padding:75px 5%}.title{text-align:center;margin-bottom:35px}.title h2{font:42px Georgia,serif;margin:0 0 10px}.title p{color:var(--muted);margin:0}
+.cats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.cat{background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden;box-shadow:var(--shadow)}.visual{height:250px;background:linear-gradient(145deg,#f1dcd7,#d4baa7);display:flex;align-items:flex-end;padding:20px;font:30px Georgia,serif}.cat:nth-child(2) .visual{background:linear-gradient(145deg,#ead2d4,#d5bdad)}.cat:nth-child(3) .visual{background:linear-gradient(145deg,#eadfcd,#d9b9ae)}.cat:nth-child(4) .visual{background:linear-gradient(145deg,#e9d9cd,#edc5ca)}.catbody{padding:18px}.catbody h3{font:22px Georgia,serif;margin:0 0 7px}.catbody p{font-size:13px;color:var(--muted);margin:0 0 13px}.soft{background:var(--pink2);border:0;padding:10px 15px;border-radius:22px;cursor:pointer;font-size:11px}
+.shopbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:25px}.filter{border:1px solid var(--line);background:white;border-radius:24px;padding:10px 15px;cursor:pointer;font-size:12px}.filter.active{background:var(--pink)}.search{margin-left:auto;border:1px solid var(--line);background:white;border-radius:24px;padding:11px 15px;min-width:220px;outline:none}
+.products{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.product{background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden;box-shadow:var(--shadow)}.pic{height:280px;background:linear-gradient(145deg,#f1ddd8,#d7c0ad);display:flex;align-items:flex-end;padding:16px;position:relative}.pic:after{content:"CAMELIA";font:28px Georgia,serif;color:rgba(255,255,255,.8)}.product:nth-child(2n) .pic{background:linear-gradient(145deg,#e9d2d2,#cdb4a8)}.product:nth-child(3n) .pic{background:linear-gradient(145deg,#eadfcf,#d4b9a9)}.tag{position:absolute;top:12px;left:12px;background:#fff;padding:7px 10px;border-radius:20px;font-size:10px}.pbody{padding:16px}.pbody h3{font:19px Georgia,serif;margin:0 0 8px}.price{font-size:17px}.old{text-decoration:line-through;color:#a89a93;font-size:12px;margin-left:6px}.buy{width:100%;border:0;background:var(--pink);border-radius:22px;padding:11px;margin-top:12px;cursor:pointer;font-size:11px}
+.feature{display:grid;grid-template-columns:1fr 1fr;background:linear-gradient(105deg,#f7e8e6,#fffaf5);max-width:1400px;margin:auto}.feature-art{min-height:440px;background:linear-gradient(135deg,#e1c2bb,#d1ad9b);position:relative}.feature-art:after{content:"MODA CURVY";position:absolute;left:35px;bottom:35px;color:white;font:45px Georgia,serif}.feature-copy{padding:70px 10%;display:flex;justify-content:center;flex-direction:column}.feature-copy h2{font:52px Georgia,serif;margin:12px 0}.feature-copy p{line-height:1.7;color:var(--muted)}
+.offer{background:var(--pink2);border-radius:14px;padding:35px;display:grid;grid-template-columns:1fr 2fr;gap:25px;align-items:center}.offer h2{font:50px Georgia,serif;margin:8px 0}.offerprice{font:38px Georgia,serif;color:#a25d68}.offers{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.mini{background:#fff;border-radius:10px;padding:22px}.mini strong{font:20px Georgia,serif}
+.story{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}.storyart{min-height:390px;border-radius:12px;background:linear-gradient(135deg,#dfc9b8,#f0dada)}.story h2{font:48px Georgia,serif;margin:12px 0}.story p{line-height:1.7;color:var(--muted)}
+.ig{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.iggrid{display:grid;grid-template-columns:repeat(5,1fr);gap:7px}.igitem{aspect-ratio:1;background:linear-gradient(135deg,#ead8cc,#d7b9b2);display:grid;place-items:center;font:18px Georgia,serif;color:#fff}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:20px}.box{background:#fff;border:1px solid var(--line);border-radius:12px;padding:32px;box-shadow:var(--shadow)}.box h2{font:38px Georgia,serif;margin-top:0}.map{min-height:290px;display:grid;place-items:center;background:linear-gradient(135deg,#eee6df,#f6dddd);font:25px Georgia,serif}
+footer{background:#e7c8cd;padding:45px 5% 25px}.foot{max-width:1200px;margin:auto;display:flex;justify-content:space-between;gap:30px}.links{display:grid;grid-template-columns:repeat(2,auto);gap:9px 35px;font-size:12px}.copy{text-align:center;font-size:10px;margin-top:30px}
+.drawer{position:fixed;right:-430px;top:0;width:min(420px,100%);height:100vh;background:#fff;z-index:60;transition:.3s;box-shadow:-12px 0 35px #0002;padding:24px;overflow:auto}.drawer.open{right:0}.shade{position:fixed;inset:0;background:#0004;z-index:50;display:none}.shade.open{display:block}.drawhead{display:flex;justify-content:space-between;align-items:center}.cartline{display:flex;justify-content:space-between;border-bottom:1px solid var(--line);padding:15px 0}.empty{color:var(--muted);padding:30px 0}
+.mobilemenu{display:none;position:fixed;inset:0;background:#fffdfa;z-index:55;padding:30px}.mobilemenu.open{display:block}.mobilelinks{display:grid;gap:22px;margin-top:55px;font:28px Georgia,serif}
+.toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%) translateY(30px);background:#403630;color:#fff;padding:12px 18px;border-radius:30px;font-size:12px;opacity:0;pointer-events:none;transition:.25s;z-index:100}.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+@media(max-width:850px){
+ .top{display:none}.nav{min-height:68px}.menu{display:none}.hamb{display:inline-block}.brand{font-size:32px}.hero{grid-template-columns:1fr}.hero-art{min-height:310px;order:-1}.hero-copy{padding:55px 8%}.hero h1{font-size:60px}.hero p{font-size:20px}
+ .cats,.products{grid-template-columns:repeat(2,1fr)}.visual,.pic{height:210px}.feature,.story,.contact,.offer{grid-template-columns:1fr}.feature-art{min-height:300px}.feature-copy{padding:50px 8%}.offer{padding:25px}.offers{grid-template-columns:1fr 1fr}.iggrid{grid-template-columns:repeat(3,1fr)}.igitem:nth-child(n+4){display:none}.foot{flex-direction:column}.search{margin-left:0;width:100%}
+}
+@media(max-width:520px){.cats,.products{grid-template-columns:1fr 1fr;gap:10px}.visual,.pic{height:175px}.section{padding:55px 4%}.title h2{font-size:34px}.offer h2,.story h2,.feature-copy h2{font-size:40px}.offers{grid-template-columns:1fr}.hero-copy{padding:45px 7%}.hero h1{font-size:53px}}
+</style>
+</head>
+<body>
+<div class="top"><b>Envíos a toda España</b><span>Ropa · Complementos · Moda Curvy</span><span>♡ Síguenos en Instagram</span></div>
+<header class="header"><div class="nav">
+<button class="iconbtn hamb" onclick="menu(true)">☰</button>
+<a class="brand" href="#inicio">Camel<span>i</span>a 🌸</a>
+<nav class="menu"><a href="#inicio">Inicio</a><a href="#tienda">Tienda</a><a href="#novedades">Novedades</a><a href="#curvy">Moda curvy</a><a href="#ofertas">Ofertas</a><a href="#contacto">Contacto</a></nav>
+<div class="actions"><button class="iconbtn" onclick="openCart()">🛍️ <span id="cartCount">0</span></button></div>
+</div></header>
+
+<div class="mobilemenu" id="mobile"><button class="iconbtn" onclick="menu(false)">✕</button><div class="brand">Camelia 🌸</div><div class="mobilelinks"><a onclick="menu(false)" href="#inicio">Inicio</a><a onclick="menu(false)" href="#tienda">Tienda</a><a onclick="menu(false)" href="#novedades">Novedades</a><a onclick="menu(false)" href="#curvy">Moda curvy</a><a onclick="menu(false)" href="#ofertas">Ofertas</a><a onclick="menu(false)" href="#contacto">Contacto</a></div></div>
+
+<main id="inicio">
+<section class="hero"><div class="hero-copy"><div class="eyebrow">Camelia · Onda, Castellón</div><h1>Viste tu esencia.</h1><p>Ropa, complementos y moda curvy para sentirte cómoda, femenina y tú misma.</p><a class="btn" href="#tienda">VER TIENDA →</a></div><div class="hero-art"></div></section>
+
+<section class="section" id="tienda"><div class="title"><h2>Descubre Camelia</h2><p>Tu tienda de moda, donde cada detalle cuenta.</p></div>
+<div class="cats">
+<div class="cat"><div class="visual">ROPA</div><div class="catbody"><h3>Ropa</h3><p>Looks para cada día.</p><button class="soft" onclick="filter('Ropa')">VER ROPA →</button></div></div>
+<div class="cat"><div class="visual">CURVY</div><div class="catbody"><h3>Moda curvy</h3><p>Moda que se adapta a ti.</p><button class="soft" onclick="filter('Curvy')">VER CURVY →</button></div></div>
+<div class="cat"><div class="visual">♡</div><div class="catbody"><h3>Complementos</h3><p>El toque que completa tu look.</p><button class="soft" onclick="filter('Complementos')">VER COMPLEMENTOS →</button></div></div>
+<div class="cat"><div class="visual">NUEVO</div><div class="catbody"><h3>Novedades</h3><p>Lo último que ha llegado.</p><button class="soft" onclick="filter('Todos')">VER NOVEDADES →</button></div></div>
+</div></section>
+
+<section class="section" id="novedades"><div class="title"><h2>Lo nuevo en Camelia</h2><p>Descubre nuestras prendas y complementos.</p></div>
+<div class="shopbar"><button class="filter active" data-cat="Todos">Todo</button><button class="filter" data-cat="Ropa">Ropa</button><button class="filter" data-cat="Curvy">Curvy</button><button class="filter" data-cat="Complementos">Complementos</button><input class="search" id="search" placeholder="Buscar productos..."></div>
+<div class="products" id="products"></div></section>
+
+<section class="feature" id="curvy"><div class="feature-art"></div><div class="feature-copy"><div class="eyebrow">Colección Camelia</div><h2>Moda curvy</h2><p>Prendas bonitas, femeninas y pensadas para que te sientas tú misma.</p><p>Descubre nuestra selección de tallas y modelos curvy.</p><a class="btn" href="#novedades" onclick="filter('Curvy')">VER MODA CURVY →</a></div></section>
+
+<section class="section" id="ofertas"><div class="offer"><div><div class="eyebrow">Precios especiales</div><h2>Ofertas Camelia</h2><p>Prendas bonitas a precios especiales.</p><div class="offerprice">Vaqueros 19,99 €</div><br><a class="btn" href="#novedades">VER OFERTAS →</a></div><div class="offers"><div class="mini"><strong>Jersey</strong><br><br>14,99 €</div><div class="mini"><strong>Bolso</strong><br><br>12,99 €</div><div class="mini"><strong>Deportivas</strong><br><br>19,99 €</div></div></div></section>
+
+<section class="section story"><div class="storyart"></div><div><div class="eyebrow">Nuestra esencia</div><h2>Tu estilo, tu Camelia</h2><p>En Camelia nos gustan las prendas que te hacen sentir cómoda, femenina y tú misma.</p><p>Ropa, complementos y moda curvy seleccionados para crear looks que encajen contigo.</p><a class="btn" href="#contacto">CONOCE CAMELIA →</a></div></section>
+
+<section class="section ig"><div class="title"><h2>Síguenos en Instagram</h2><p>@camelia_tienda · Novedades, looks y nuevas llegadas.</p></div><div class="iggrid"><div class="igitem">LOOK</div><div class="igitem">CURVY</div><div class="igitem">NOVEDADES</div><div class="igitem">CAMELIA</div><div class="igitem">LOOK</div></div></section>
+
+<section class="section" id="contacto"><div class="contact"><div class="box"><h2>Ven a conocernos</h2><p>📍 <b>Travessera Corts Valencianes 1</b><br>Onda, Castellón</p><p><b>Horario</b><br>Lunes a viernes: 9:30–13:30 · 17:00–20:00<br>Sábado: 10:00–13:00 · 17:00–20:00</p><a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Travessera+Corts+Valencianes+1+Onda+Castell%C3%B3n">CÓMO LLEGAR →</a></div><div class="map">♡<br>CAMELIA<br><small>Onda, Castellón</small></div></div></section>
+</main>
+
+<footer><div class="foot"><div><div class="brand">Camelia 🌸</div><p>Ropa · Complementos · Moda Curvy</p></div><div class="links"><a href="#inicio">Inicio</a><a href="#tienda">Tienda</a><a href="#novedades">Novedades</a><a href="#curvy">Moda curvy</a><a href="#ofertas">Ofertas</a><a href="#contacto">Contacto</a><a href="#">Aviso legal</a><a href="#">Privacidad</a><a href="#">Cookies</a><a href="#">Envíos y devoluciones</a></div></div><div class="copy">© 2026 Camelia · Todos los derechos reservados.</div></footer>
+
+<div class="shade" id="shade" onclick="openCart()"></div>
+<aside class="drawer" id="drawer"><div class="drawhead"><h2>Tu carrito</h2><button class="iconbtn" onclick="openCart()">✕</button></div><div id="cartItems"></div><h3 id="total">Total: 0,00 €</h3><button class="btn" style="width:100%" onclick="whatsappOrder()">PEDIR POR WHATSAPP</button><p style="font-size:11px;color:#806f67">El pedido se prepara por WhatsApp. El pago online se puede conectar después.</p></aside>
+<div class="toast" id="toast">Añadido al carrito ♡</div>
+
+<script>
+const products=[
+{id:1,name:"Vestido fluido",price:29.99,cat:"Ropa",tag:"NOVEDAD"},
+{id:2,name:"Vaquero recto",price:19.99,cat:"Ropa",tag:"OFERTA"},
+{id:3,name:"Bolso elegante",price:24.99,cat:"Complementos",tag:"NOVEDAD"},
+{id:4,name:"Blusa satinada",price:22.99,cat:"Ropa",tag:"NOVEDAD"},
+{id:5,name:"Vestido curvy floral",price:34.99,cat:"Curvy",tag:"CURVY"},
+{id:6,name:"Pantalón curvy",price:27.99,cat:"Curvy",tag:"CURVY"},
+{id:7,name:"Bolso pequeño",price:7.50,cat:"Complementos",tag:"TOP"},
+{id:8,name:"Pañuelo con anilla",price:6.50,cat:"Complementos",tag:"NOVEDAD"}
+];
+let cart=JSON.parse(localStorage.getItem("camelia_cart")||"[]"), active="Todos";
+const euro=n=>n.toFixed(2).replace(".",",")+" €";
+function render(){
+ const q=document.getElementById("search").value.toLowerCase();
+ const list=products.filter(p=>(active==="Todos"||p.cat===active)&&(p.name.toLowerCase().includes(q)));
+ document.getElementById("products").innerHTML=list.map(p=>`
+ <article class="product"><div class="pic"><span class="tag">${p.tag}</span></div>
+ <div class="pbody"><h3>${p.name}</h3><div class="price">${euro(p.price)}</div>
+ <button class="buy" onclick="add(${p.id})">AÑADIR AL CARRITO</button></div></article>`).join("");
+ document.querySelectorAll(".filter").forEach(b=>b.classList.toggle("active",b.dataset.cat===active));
+}
+function filter(cat){active=cat;document.getElementById("novedades").scrollIntoView({behavior:"smooth"});render()}
+document.querySelectorAll(".filter").forEach(b=>b.onclick=()=>{active=b.dataset.cat;render()});
+document.getElementById("search").addEventListener("input",render);
+function add(id){const p=products.find(x=>x.id===id);cart.push(p);localStorage.setItem("camelia_cart",JSON.stringify(cart));renderCart();toast()}
+function remove(i){cart.splice(i,1);localStorage.setItem("camelia_cart",JSON.stringify(cart));renderCart()}
+function renderCart(){
+ document.getElementById("cartCount").textContent=cart.length;
+ const box=document.getElementById("cartItems");
+ if(!cart.length){box.innerHTML='<div class="empty">Tu carrito está vacío.</div>';document.getElementById("total").textContent="Total: 0,00 €";return}
+ let total=0;box.innerHTML=cart.map((p,i)=>{total+=p.price;return `<div class="cartline"><span>${p.name}<br><small>${euro(p.price)}</small></span><button class="iconbtn" onclick="remove(${i})">×</button></div>`}).join("");
+ document.getElementById("total").textContent="Total: "+euro(total);
+}
+function openCart(){document.getElementById("drawer").classList.toggle("open");document.getElementById("shade").classList.toggle("open")}
+function menu(v){document.getElementById("mobile").classList.toggle("open",v)}
+function toast(){const t=document.getElementById("toast");t.classList.add("show");setTimeout(()=>t.classList.remove("show"),1500)}
+function whatsappOrder(){
+ if(!cart.length){alert("Añade algún producto al carrito.");return}
+ let total=cart.reduce((s,p)=>s+p.price,0);
+ let text="Hola Camelia 🌸%0AQuiero hacer este pedido:%0A"+cart.map(p=>"• "+p.name+" — "+euro(p.price)).join("%0A")+"%0A%0ATotal: "+euro(total)+"%0A%0A¿Me podéis indicar cómo continuar con el pedido?";
+ window.open("https://wa.me/?text="+text,"_blank");
+}
+render();renderCart();
+</script>
+</body></html>
